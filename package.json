@@ -1,0 +1,24 @@
+{
+  "name": "listener",
+  "version": "0.1.0",
+  "description": "Keyword listener: searches the web (incl. public Facebook/X via site: queries) and alerts you on Telegram",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "db:init": "node src/cli.js db-init",
+    "kw": "node src/cli.js kw",
+    "test:telegram": "node src/cli.js telegram-test",
+    "test:search": "node src/cli.js search-test",
+    "stats": "node src/cli.js stats",
+    "skip-pending": "node src/cli.js skip-pending",
+    "once": "node src/index.js --once",
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "pg": "^8.11.3"
+  }
+}
